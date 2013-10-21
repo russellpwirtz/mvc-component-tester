@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>mvc-calculator</groupId>
-    <artifactId>mvc-calculator</artifactId>
+    <groupId>mvc-component-tester</groupId>
+    <artifactId>mvc-component-tester</artifactId>
     <packaging>war</packaging>
     <version>1.0</version>
 
@@ -118,6 +118,12 @@
             <groupId>org.codehaus.jackson</groupId>
             <artifactId>jackson-mapper-asl</artifactId>
             <version>1.9.7</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.activemq</groupId>
+            <artifactId>activemq-core</artifactId>
+            <version>5.7.0</version>
         </dependency>
 
     </dependencies>
