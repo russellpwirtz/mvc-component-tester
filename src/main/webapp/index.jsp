@@ -1,5 +1,5 @@
 <html>
 <body>
-<h2>Math World!</h2>
+<h2>Component World!</h2>
 </body>
 </html>

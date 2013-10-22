@@ -17,6 +17,5 @@
     <!-- So @Autowired will work. -->
     <context:annotation-config/>
 
-	<bean name="mathController" class="com.zipwhip.website.controllers.ComponentController">
-    </bean>
+	<bean name="componentController" class="com.zipwhip.website.controllers.ComponentController"/>
 </beans>

@@ -22,4 +22,16 @@
         </property>
     </bean>
 
+    <bean id="curatorFramework" class="org.apache.curator.framework.CuratorFrameworkFactory"
+          factory-method="newClient">
+        <!--<constructor-arg value="0.0.0.0:2181"/>-->
+        <constructor-arg value="50.112.218.120:2181,54.214.125.237:2181,54.212.210.46:2181"/>
+        <constructor-arg>
+            <bean class="org.apache.curator.retry.ExponentialBackoffRetry">
+                <constructor-arg value="1000"/>
+                <constructor-arg value="3"/>
+            </bean>
+        </constructor-arg>
+    </bean>
+
 </beans>
