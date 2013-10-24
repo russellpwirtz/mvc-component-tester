@@ -34,4 +34,32 @@
         </constructor-arg>
     </bean>
 
+    <bean id="cassandraKeyspace" class="com.zipwhip.cassandra.AstyanaxFactory" factory-method="createKeyspace">
+        <constructor-arg>
+            <bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+                <property name="targetObject">
+                    <bean class="com.zipwhip.cassandra.AstyanaxFactory"/>
+                </property>
+                <property name="targetMethod" value="createContext"/>
+                <property name="arguments">
+                    <list>
+                        <!--name-->
+                        <value type="java.lang.String">ZipwhipConnectionPool</value>
+                        <!--cluster-->
+                        <value type="java.lang.String">ZipwhipCluster</value>
+                        <!--keyspace-->
+                        <value type="java.lang.String">SignalMailbox</value>
+                        <!--seeds-->
+                        <!--<value type="java.lang.String">localhost:9160</value>-->
+                        <value type="java.lang.String">54.212.131.20:9160,54.202.159.33:9160</value>
+                        <!--max connections per host-->
+                        <value type="java.lang.Integer">10</value>
+                        <!--port-->
+                        <value type="java.lang.Integer">9160</value>
+                    </list>
+                </property>
+            </bean>
+        </constructor-arg>
+    </bean>
+
 </beans>
